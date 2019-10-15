@@ -1,0 +1,12 @@
+2.1: Writing a proper Python class
+
+- Each class should have a docstring to provide documentation on how to use it.
+- Each class should have a __str__ method to give it a meaningful string representation
+- Each class should have a proper __repr__ method for representation in the interactive shell, the debugger, and other cases where string conversion doesn't happen
+- Each other class should be comparable to it can  be sorted meaningfully compared to other instances. At a minimum we should be implementing __eq__ and __lt__.
+- You should think about access control each instance variable. Which attributes do you want to make public, which attributes do you want to make read only, which attributes do you want to control or do value checking on before you allow them to be changed?
+
+- You should be able to fin dout how many things the container holds using len
+- You should be able to iterate over the items in the container
+- You may want to allow users to access  the items in the container using the square bracket index notation.
+

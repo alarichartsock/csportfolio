@@ -1,0 +1,47 @@
+3.1 Objectives
+
+3.2 What is Algorithm Analysis?
+
+Algorithm analysis is concerned with comparing algorithms based upon the amount of computer resources that each algorithm uses. 
+
+As an alternative to space requirements, we can analyze algorithms by their execution times or "running time" of the analysis.
+
+3.3 Big-On Notaton
+
+When we characterize an algorithm's efficiency in terms of excution time, it is important to mention the number of operations or steps that the algorithm will require.
+
+Big O notation, or "order" of magnitude notation, is the tool we want to use to determine the computational efficiency of algorithms with increasingly difficult inputs. 
+
+When we determine the big O factor of an algorithm, we focus on the worst case, or average case, performance. 
+
+3.4 Example
+
+Just look on runestone
+
+3.6 Performance of Python Lists
+
+index [] : O(1)
+index assignment : O(1)
+append : O(1)
+pop() : O(1)
+pop(i) : O(n)
+insert(i,item) : O(n)
+del operator : O(n)
+iteration : O(n)
+contains (in) : O(n)
+get slice [x:y] : O(k)
+del slice : O(n)
+set slice : O(n+k)
+reverse : O(n)
+concatenate : O(k)
+sort : O(n log n)
+multiply : O(nk)
+
+3.7 Performance of Python Dictionaries
+
+copy : O(n)
+get item : O(1)
+set item : O(1)
+delete item : O(1)
+contains (in) : O(1)
+iteration : O(n)
