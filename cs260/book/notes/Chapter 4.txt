@@ -49,3 +49,5 @@ s.size() : [4,'dog'] : 2
 
 4.5 Implementing a Stack in Python
 
+See activecode 20,21,22.
+
