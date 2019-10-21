@@ -1,0 +1,51 @@
+4.1 Objectives
+
+To understand the abstract data types stack, queue, deque, and list.
+To be able to implement the ADTs stack, queue, and deque using Python lists.
+To understand the performance of the implementations of basic linear data structures.
+To understand prefix, infix, and postfix expression formats.
+To use stacks to evaluate postfix expressions.
+To use stacks to convert expressions from infix to postfix.
+To use queues for basic timing simulations.
+To be able to recognize problem properties where stacks, queues, and deques are appropriate data structures.
+To be able to implement the abstract data type list as a linked list using the node and reference pattern.
+To be able to compare the performance of our linked list implementation with Python’s list implementation.
+
+4.2 What are Linear Structures?
+
+Stacks, queues, deques, and lists are examples of data collections.
+
+Linear structures are thought of as having two ends, either "left or right", or "front or rear".
+
+4.3 What is a stack?
+
+A stack is an ordered collection of items. It follows LIFO, or Last-in first-out.
+
+Pretty simple. The thing on top of the stack is the last item of the stack, if you were going to index it.
+/\maybe not true
+
+4.4 The Stack Abstract Data type
+
+Stack() creates a new stack that is empty. It needs no parameters and returns an empty stack.
+push(item) adds a new item to the top of the stack. It needs the item and returns nothing.
+pop() removes the top item from the stack. It needs no parameters and returns the item. The stack is modified.
+peek() returns the top item from the stack but does not remove it. It needs no parameters. The stack is not modified.
+isEmpty() tests to see whether the stack is empty. It needs no parameters and returns a boolean value.
+size() returns the number of items on the stack. It needs no parameters and returns an integer.
+
+Here is opterations ordered by operation, contents, and return value.
+
+s.isEmpty() : [] : True
+s.push(4) : [4] :  null
+s.push('dog') : [4,'dog']
+s.peek() : [4,'dog'] : 'dog' 
+s.push(True) : [4,'dog',True]
+s.size() : [4,'dog',True] : 3
+s.isEmpty() : [4,'dog',True] : False
+s.push(8.4) : [4,'dog',True,8.4] : null
+s.pop() : [4,'dog',True] :  8.4
+s.pop() : [4,'dog'] : True
+s.size() : [4,'dog'] : 2
+
+4.5 Implementing a Stack in Python
+
