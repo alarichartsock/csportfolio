@@ -49,5 +49,73 @@ s.size() : [4,'dog'] : 2
 
 4.5 Implementing a Stack in Python
 
-See activecode 20,21,22.
+See activecodes on runestone
+
+maybe read infix and postfix expressions? I skipped it.
+
+4.10 Queue
+
+A queue is a data collectiont that operates on first in, first out. 
+
+A queue is a line, or like a reversed stack.
+
+4.11 The queue abstract data type
+
+Here's some methods for the queue data type.
+
+q.isEmpty() : [] : True
+q.enqueue(4) : [4]
+q.enqueue('dog') : ['dog',4]
+q.enqueue(True) : [True,'dog',4]
+q.size() : [True,'dog',4] : 3
+q.isEmpty() : [True,'dog',4] : False
+q.enqueue(8.4) : [8.4,True,'dog',4]
+q.dequeue() : [8.4,True,'dog'] : 4
+q.dequeue() : [8.4,True] : 'dog'
+q.size() : [8.4,True] : 2
+
+4.12 Implementing a queue in Python 
+
+Look on runestone
+
+4.15 What is a deque?
+
+A deque is known as a double ended queue. It behaves like both a stack and a queue, without having to follow FIFO of LIFO.
+
+4.16 The deque abstract queue
+
+d.isEmpty() : [] : True
+d.addRear(4) : [4]
+d.addRear('dog') : ['dog',4,]
+d.addFront('cat') : ['dog',4,'cat']
+d.addFront(True) : ['dog',4,'cat',True]
+d.size() : ['dog',4,'cat',True] : 4
+d.isEmpty() : ['dog',4,'cat',True] : False
+d.addRear(8.4) : [8.4,'dog',4,'cat',True]
+d.removeRear() : ['dog',4,'cat',True] :8.4
+d.removeFront() : ['dog',4,'cat'] : True
+
+4.16 Implementing a deque in Python
+
+Look up on Runestone.
+
+4.19 Lists
+
+A list is a data collection with a bunch of different data points that have relative position to one another.
+
+When we talk about lists in this section, we're talking about unordered lists.
+
+4.20 The Unordered List Abstract Data type
+
+List() creates a new list that is empty. It needs no parameters and returns an empty list.
+add(item) adds a new item to the list. It needs the item and returns nothing. Assume the item is not already in the list.
+remove(item) removes the item from the list. It needs the item and modifies the list. Assume the item is present in the list.
+search(item) searches for the item in the list. It needs the item and returns a boolean value.
+isEmpty() tests to see whether the list is empty. It needs no parameters and returns a boolean value.
+size() returns the number of items in the list. It needs no parameters and returns an integer.
+append(item) adds a new item to the end of the list making it the last item in the collection. It needs the item and returns nothing. Assume the item is not already in the list.
+index(item) returns the position of item in the list. It needs the item and returns the index. Assume the item is in the list.
+insert(pos,item) adds a new item to the list at position pos. It needs the item and returns nothing. Assume the item is not already in the list and there are enough existing items to have position pos.
+pop() removes and returns the last item in the list. It needs nothing and returns an item. Assume the list has at least one item.
+pop(pos) removes and returns the item at position pos. It needs the position and returns the item. Assume the item is in the list.
 

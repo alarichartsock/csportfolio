@@ -1,0 +1,1 @@
+#Yes, I think that I could use Index for the range of the random numbers.

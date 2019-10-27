@@ -28,3 +28,13 @@ print(TestListIndex(1000))
 print(TestListIndex(10000))
 print(TestListIndex(100000))
 print(TestListIndex(10000000))
+
+import unittest
+
+class test(unittest.TestCase):
+    def testMathAndEq(self):
+        self.assertTrue(List[0],1)
+        
+if __name__ == '__main__':
+    unittest.main()
+

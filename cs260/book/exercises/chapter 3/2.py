@@ -30,3 +30,12 @@ print(TestDictionaryGet(1000))
 print(TestDictionaryGet(10000))
 print(TestDictionaryGet(100000))
 print(TestDictionaryGet(1000000))
+
+import unittest
+
+class test(unittest.TestCase):
+    def testMathAndEq(self):
+        self.assertTrue(dictionary['example'],1)
+        
+if __name__ == '__main__':
+    unittest.main()
