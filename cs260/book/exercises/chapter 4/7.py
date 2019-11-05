@@ -24,14 +24,6 @@ class ModifiedQueue:
         print(self.items)
         return
 
-def time_decorator(fn):
-    def func(x):
-        start = time.time()
-        x = fn(x)
-        end = time.time()
-        return x, end-start
-    return func
-
 import unittest
 
 class test(unittest.TestCase):

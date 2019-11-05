@@ -7,6 +7,7 @@ import random
 RandomList = []
 
 def populateList(length,depth):
+    """Populates list with random numbers"""
     for i in range(length):
         RandomList.append(random.randint(1,depth))
 
@@ -15,6 +16,7 @@ populateList(5000,1000)
 #I'm going to try it with a list 5000 numbers long, 1000 numbers tall
 
 def findSmallestNumber():
+    """Sorts the list, finds the nth smallest number"""
     RandomList.sort()
     print(RandomList[0])
 
@@ -25,8 +27,8 @@ findSmallestNumber()
 import unittest
 
 class test(unittest.TestCase):
+    """Tests to make sure that findSmallestNumber is working"""
     def testMathAndEq(self):
-
         self.assertTrue(RandomList[0],1)
         
 if __name__ == '__main__':

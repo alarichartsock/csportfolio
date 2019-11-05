@@ -30,7 +30,7 @@ class ModifiedQueue:
 
 import unittest
 
-class test(unittest.TestCase):
+class testCars(unittest.TestCase):
     def testQueue(self):
         """Tests a real world scenario, in this case a car wash using the queue data structure.."""
         q = ModifiedQueue()
