@@ -88,6 +88,7 @@ import unittest
 
 class test(unittest.TestCase):
     def testMathAndEq(self):
+        """Tests math for the calculator"""
         self.assertEqual(infixEval("7 + 7 - 6"),8)
         
 if __name__ == '__main__':

@@ -6,12 +6,14 @@ from collections import defaultdict # Only way to automatically populate a dicti
 dictionary = defaultdict(list)
 
 def set_up_dictionary(O):
+    """Sets up the experiment"""
     for i in range(O):
         dictionary['example'].append(("example",1))
 
 set_up_dictionary(1000000)
 
 def time_decorator(fn):
+    """Sets up basic timekeeping"""
     def func(x):
         start = time.time()
         x = fn(x)
@@ -35,6 +37,7 @@ import unittest
 
 class test(unittest.TestCase):
     def testMathAndEq(self):
+        """Tests the dictionary"""
         self.assertTrue(dictionary['example'],1)
         
 if __name__ == '__main__':

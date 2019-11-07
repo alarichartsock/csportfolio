@@ -5,43 +5,55 @@ import time
 class NewQueue:
     """Modified Queue for decreased time complexity"""
     def __init__(self):
+        """Sets up queue"""
         self.items = []
 
     def isEmpty(self):
+        """Returns true if the queue is empty"""
         return self.items == []
 
     def enqueue(self, item):
+        """Puts an item in the queue"""
         self.items.append(item)
 
     def dequeue(self):
+        """Removes an item from the queue"""
         del self.items[0]
         return
 
     def size(self):
+        """Returns the size of the queue"""
         return len(self.items)
     
     def show(self):
+        """Prints the queue"""
         print(self.items)
         return
 
 class Queue:
     """Traditional Queue implementation."""
     def __init__(self):
+        """Initializes a queue"""
         self.items = []
 
     def isEmpty(self):
+        """Returns true if the queue is empty"""
         return self.items == []
 
     def enqueue(self, item):
+        """Adds an item to the queue"""
         self.items.insert(0,item)
 
     def dequeue(self):
+        """Removes an item from the queue"""
         return self.items.pop()
 
     def size(self):
+        """Returns the size of the queue"""
         return len(self.items)
 
 def time_decorator(fn):
+    """Sets up basic timekeeping"""
     def func(x):
         start = time.time()
         x = fn(x)
@@ -70,10 +82,12 @@ def TestNewQueueEnque(O):
     return O
 
 def testOldAccurately(O):
+    """Tests old queue accurately"""
     for i in range(O):
         print(TestOldQueueEnque(i*1000))
 
 def testNewAccurately(O):
+    """Tests new queue accurately"""
     for i in range(O):
         print(TestNewQueueEnque(i*1000))
 
@@ -88,6 +102,7 @@ import unittest
 
 class test(unittest.TestCase):
     def testQueue(self):
+        """Tests queue"""
         q = NewQueue()
         q.enqueue(1)
         self.assertTrue(q.isEmpty,False)

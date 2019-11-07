@@ -5,21 +5,27 @@ import random
 class Queue:
     """Abstract Queue implementation, order is LIFO."""
     def __init__(self):
+        """Initializes a queue"""
         self.items = []
 
     def isEmpty(self):
+        """Returns true if the queue is empty"""
         return self.items == []
 
     def enqueue(self, item):
+        """Adds item to queue"""
         self.items.insert(0,item)
 
     def dequeue(self):
+        """Removes item from queue"""
         return self.items.pop()
 
     def size(self):
+        """Returns size of queue"""
         return len(self.items)
 
 def hotPotato(namelist, num):
+    """Simulates a game of hot potato"""
     simqueue = Queue()
     for name in namelist:
         simqueue.enqueue(name)

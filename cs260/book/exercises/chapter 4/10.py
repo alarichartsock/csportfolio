@@ -3,24 +3,31 @@
 class Queue:
     """Abstract Queue implementation, order is LIFO."""
     def __init__(self):
+        """Initializes a queue"""
         self.items = []
 
     def isEmpty(self):
+        """Returns true is empty"""
         return self.items == []
 
     def enqueue(self, item):
+        """Adds item to queue"""
         self.items.insert(0,item)
 
     def dequeue(self):
+        """Removes item from queue"""
         return self.items.pop()
 
     def size(self):
+        """Returns size of list"""
         return len(self.items)
 
     def show(self):
+        """Prints queue"""
         return self.items
 
 def RadixSort(items):
+    """Sorts an array using the radix algorithm"""
     mainBin = Queue()
     bin0 = Queue()
     bin1 = Queue()
@@ -113,7 +120,8 @@ print(RadixSort([112,543,313,721,411,456]))
 import unittest
 
 class testRadix(unittest.TestCase):
-    def testQueue(self):
+    def testRadix(self):
+        """Tests radix algorithm"""
         self.assertTrue(RadixSort([112,543,313,721,411,456]),[112, 313, 411, 456, 543, 721])
         
 if __name__ == '__main__':

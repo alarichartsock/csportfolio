@@ -7,12 +7,14 @@ from collections import defaultdict # Only way to automatically populate a dicti
 
 List = []
 def set_Up_List(O):
+    """Sets up the experiment"""
     for i in range(O+1):
         List.append(1)
         
 set_up_list(10000000);
 
 def time_decorator(fn):
+    """Sets up basic timekeeping"""
     def func(x):
         start = time.time()
         x = fn(x)
@@ -25,6 +27,7 @@ def time_decorator(fn):
 dictionary = defaultdict(list)
 
 def set_up_dictionary(O):
+    """Sets up dictionary"""
     for i in range(O+1):
         dictionary[i].append(i)
 
@@ -74,6 +77,7 @@ print(TestDictionaryDelete(1000000))
 #Here's a more detailed experiment that creates more data points. 
 
 def testListDeleteMoreAccurately(O):
+    """Tests list delete more accurately"""
     for i in range(O):
         print(TestListDelete(i*100))
 

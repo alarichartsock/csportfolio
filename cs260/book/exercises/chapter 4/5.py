@@ -3,22 +3,28 @@
 class Queue:
     """Traditional Queue implementation from runestone.academy."""
     def __init__(self):
+        """Initializes Queue"""
         self.items = []
 
     def isEmpty(self):
+        """Checks if the Queue is empty"""
         return self.items == []
 
     def enqueue(self, item):
+        """Adds an item to the queue"""
         self.items.append(item)
 
     def dequeue(self):
+        """Removes an item from the queue"""
         del self.items[0]
         return
 
     def size(self):
+        """Returns total size of Queue"""
         return len(self.items)
     
     def show(self):
+        """Prints the queue"""
         print(self.items)
         return
 

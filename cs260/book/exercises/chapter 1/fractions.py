@@ -112,6 +112,7 @@ class Fraction:
 
 class testFraction(unittest.TestCase):
     def testMathAndEq(self):
+        """Tests the Fraction class"""
         x = Fraction(1,3)
         y = Fraction(1,2)
         self.assertTrue(x+y,Fraction(5,6))

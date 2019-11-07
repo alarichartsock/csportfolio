@@ -1,6 +1,4 @@
-#23: Implement a queue using linked lists
-
-import unittest
+#28: Create an implementation of a queue that would have an average performance of O(1) for enqueue and dequeue operations.
 
 class Node:
     """Holds data for the UnorderedList class."""
@@ -128,7 +126,10 @@ class UnorderedList:
                 previous = current
                 current = current.getNext()
                 i = i + 1
-            previous.setNext(current.getNext())
+            if previous == None:
+                self.head = current.getNext()
+            else:
+                previous.setNext(current.getNext())
             return current.getData()
 
     def insert(self, index, data):
@@ -180,20 +181,3 @@ class UnorderedListQueue:
     def size(self):
         """Returns the size of the queue"""
         return self.unorderedlist.size()    
-
-class testList(unittest.TestCase):
-    def testUnorderedList(self):
-        """Tests unordered list data structure"""
-        def setUp(self):
-            myList = UnorderedListQueue()
-            myList.enqueue(17)
-            myList.enqueue(16)
-            myList.enqueue(15)
-            self.assertEqual(myList.size(),3)
-            self.assertEqual(myList.pop(),17)
-
-if __name__ == '__main__':
-    unittest.main()
-
-
-

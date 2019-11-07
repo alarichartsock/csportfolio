@@ -9,22 +9,29 @@
 #I'm gonna do cars lined up at a car wash.
 
 class ModifiedQueue:
+    """Traditional Queue implementation from runestone.academy."""
     def __init__(self):
+        """Initializes a Queue"""
         self.items = []
 
     def isEmpty(self):
+        """Returns true if the queue is empty"""
         return self.items == []
 
     def enqueue(self, item):
+        """Adds an item to the queue"""
         self.items.append(item)
 
     def dequeue(self):
+        """Removes an item from the queue"""
         return self.items.pop(0)
 
     def size(self):
+        """Returns size of queue"""
         return len(self.items)
 
     def show(self):
+        """Prints queue"""
         print(self.items)
         return
 

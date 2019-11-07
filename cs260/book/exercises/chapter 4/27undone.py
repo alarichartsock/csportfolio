@@ -1,6 +1,4 @@
-#23: Implement a queue using linked lists
-
-import unittest
+# 27: The linked list implementation given above is called a singly linked list because each node has a single reference to the next node in sequence. An alternative implementation is known as a doubly linked list. In this implementation, each node has a reference to the next node (commonly called next) as well as a reference to the preceding node (commonly called back). The head reference also contains two references, one to the first node in the linked list and one to the last. Code this implementation in Python.
 
 class Node:
     """Holds data for the UnorderedList class."""
@@ -9,6 +7,7 @@ class Node:
         """Initializes the class with data."""
         self.data = initdata
         self.next = None
+        self.back = None
 
     def getData(self):
         """Returns data held within Node."""
@@ -17,6 +16,14 @@ class Node:
     def getNext(self):
         """Gets the item that the Node is pointing at."""
         return self.next
+    
+    def getBack(self):
+        """Gets the preceding Node."""
+        return self.back
+
+    def setBack(self, newdata):
+        """Gets the preceding Node."""
+        self.back = newdata
 
     def setData(self, newdata):
         """Replaces data held inside of Node."""
@@ -26,24 +33,49 @@ class Node:
         """Sets what the Node is pointing at."""
         self.next = newnext
 
-class UnorderedList:
-    """Implements the UnorderedList data type"""
+class Head:
+    """Implements the Head class"""
+    def __init__ (self):
+        """Initializes Head ;)"""
+        self.start = None
+        self.end = None
+
+    def getStart(self):
+        """"Gets start"""
+        return self.start
+
+    def getEnd(self):
+        """Gets end"""
+        return self.end
+    
+    def setStart(self,newnode):
+        """Sets start"""
+        self.start = newnode
+
+    def setEnd(self,newnode):
+        """Sets end"""
+        self.end = newnode
+
+class DoublyLinkedList:
+    """Implements the DoublyLinkedList data type"""
 
     def __init__(self):
         """Initializes an unordered list"""
-        self.head = None
+        self.head = Head()
         self._size = 0
 
     def isEmpty(self):
         """Returns true if list is empty"""
-        return self.head == None
+        return self.head.getStart() == None
 
     def add(self, item):
         """Adds to the list"""
         self._size = self._size + 1
         temp = Node(item)
-        temp.setNext(self.head)
-        self.head = temp
+        temp.setNext(self.head.getStart())
+        temp.setBack(self.head)
+        self.head.setStart(temp)
+        self.head.setEnd(temp)
 
     def size(self):
         """Returns size of list"""
@@ -86,7 +118,7 @@ class UnorderedList:
 
     def __str__(self):
         """Returns a stringified representation of the lists's state"""
-        current = self.head
+        current = self.head.getStart()
         strs = "[ "
         while current != None:
             strs = strs + str(current.getData()) + ", "
@@ -113,13 +145,10 @@ class UnorderedList:
     def pop(self, index=None):
         """Removes and returns the last item of the list"""
         if index == None:
-            current = self.head
-            previous = None
-            while current.getNext() != None:
-                previous = current
-                current = current.getNext()
-            previous.setNext(None)
-            return previous.getData()
+            end = self.head.getEnd()
+            secondtoend = end.getBack()
+            secondtoend.setNext(None)
+            return end
         else:
             current = self.head
             previous = None
@@ -128,7 +157,10 @@ class UnorderedList:
                 previous = current
                 current = current.getNext()
                 i = i + 1
-            previous.setNext(current.getNext())
+            if previous == None:
+                self.head = current.getNext()
+            else:
+                previous.setNext(current.getNext())
             return current.getData()
 
     def insert(self, index, data):
@@ -158,42 +190,11 @@ class UnorderedList:
             i = i + 1
         return copyList
 
-class UnorderedListQueue:
-    """Implements a queue using Unordered lists"""
-
-    def __init__(self):
-        """"Initializes UnorderedListQueue"""
-        self.unorderedlist = UnorderedList()
-
-    def enqueue(self,item):
-        """Adds a list to the queue"""
-        self.unorderedlist.add(item)
-    
-    def dequeue(self):
-        """Removes the item in the front of the queue"""
-        self.unorderedlist.pop()
-
-    def isEmpty(self):
-        """Returns true if the list is empty"""
-        return self.unorderedlist.isEmpty()
-
-    def size(self):
-        """Returns the size of the queue"""
-        return self.unorderedlist.size()    
-
-class testList(unittest.TestCase):
-    def testUnorderedList(self):
-        """Tests unordered list data structure"""
-        def setUp(self):
-            myList = UnorderedListQueue()
-            myList.enqueue(17)
-            myList.enqueue(16)
-            myList.enqueue(15)
-            self.assertEqual(myList.size(),3)
-            self.assertEqual(myList.pop(),17)
-
-if __name__ == '__main__':
-    unittest.main()
-
-
-
+d = DoublyLinkedList()
+d.add(1)
+d.add(2)
+d.add(3)
+print(d)
+print(d.size())
+d.pop()
+print(d)
