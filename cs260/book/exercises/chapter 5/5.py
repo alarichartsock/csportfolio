@@ -63,10 +63,12 @@ def TestTraditional(O):
     return O
 
 def testRecursiveAccurately(O):
+    """Tests recursion accurately."""
     for i in range(O):
         print(TestRecursive(i))
 
 def testTraditionalAccurately(O):
+    """Tests traditional accurately."""
     for i in range(O):
         print(TestTraditional(i))
 

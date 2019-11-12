@@ -29,7 +29,10 @@ def tree(branchLen,t,):
         t.right(20)
         t.backward(branchLen)
 
-def main():
+import unittest
+
+class test(unittest.TestCase):
+    """Tests the code, acts as a main driver."""
     t = turtle.Turtle()
     myWin = turtle.Screen()
     t.left(90)
@@ -40,11 +43,5 @@ def main():
     tree(75,t)
     myWin.exitonclick()
 
-main()
-
-import unittest
-
-class test(unittest.TestCase):
-    
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+    unittest.main()

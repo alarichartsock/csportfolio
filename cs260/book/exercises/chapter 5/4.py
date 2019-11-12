@@ -31,12 +31,11 @@ def main ():
     Bob = turtle.Turtle()
     mountain(x, y, complexity, Bob)
 
-main ()
-
 import unittest
 
 class test(unittest.TestCase):
-    self.assertTrue(1,1)
-    
-# if __name__ == '__main__':
-#     unittest.main()
+    """Tests the code, acts as a main driver."""
+    main()
+
+if __name__ == '__main__':
+    unittest.main()
