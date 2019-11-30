@@ -6,7 +6,9 @@ def pascalsTriangle(n,current):
     if n == current:
         print(pascalsRow(n))
     else:
-        print(pascalsRow(current))
+        q = "   "
+        q = q * (n-current)
+        print(q + pascalsRow(current))
         pascalsTriangle(n,current+1)
 
 def pascalsRow(n):
@@ -31,7 +33,7 @@ def factorial(n):
 class test(unittest.TestCase):
     """Tests the code, acts as a main driver."""
     def test(self):
-        print(pascalsTriangle(15,0))
+        print(pascalsTriangle(20,0))
         self.assertTrue(pascalsRow(3),[ 1.0, 3.0, 3.0, 1.0, ])
 
 if __name__ == '__main__':
