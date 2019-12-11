@@ -205,7 +205,6 @@ Now that we've defined insert, let's go over delMin. If we want to delete the mi
 So we remove our root, and then swap our next smallest item up to the root. Then we shuffle our tree to restore compliance. 
 
 
-
     7.12 Search Tree operations
 
 We're gonna be going into binary search trees now.
