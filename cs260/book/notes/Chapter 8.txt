@@ -75,5 +75,3 @@ When we have a graph with a lot of edges, we can use an algorithm to group toget
 
 Sometimes we need to find the shortest path through a graph.
 
-
-
