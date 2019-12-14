@@ -1,3 +1,6 @@
+
+#Me and Sam Jadzak worked on this together, so our code might look slightly similar.
+
 file = open("C:/Users/iamth/Documents/Academics/School/csportfolio/cs260/maze/examplemaze.txt","r")
 x = file.read()
 y = x.split('\n')
@@ -127,7 +130,6 @@ class Runner:
         self.s.push((self.prevx,self.prevy))
         for i in range(len(vals)):
             v = vals.pop()
-            print(v)
             if v[0] == self.prevx and v[1] == self.prevy:
                 pass
             else:
