@@ -3,116 +3,59 @@
 import unittest
 
 class Vertex:
-    """Implements a Vertex class, used in the Graph ADT."""
+    """Vertex Implementation. A Vertex holds data within a graph"""
     def __init__(self,key):
-        """Initializes a Vertex."""
+        """Initializes a graph"""
         self.id = key
         self.connectedTo = {}
-        self.color = "White"
-        self.finish = 0
-        self.discovery = 0
-
-    def replaceNeighbors(self,newneighbors):
-        """Replaces the connectedTo dictionary."""
-        self.connectedTo = newneighbors
 
     def addNeighbor(self,nbr,weight=0):
-        """Adds a neighbor to the Vertex."""
+        """Adds a neightbor to a vertex"""
         self.connectedTo[nbr] = weight
 
     def __str__(self):
-        """Overrides the toString method."""
+        """OVerrides the tostring method."""
         return str(self.id) + ' connectedTo: ' + str([x.id for x in self.connectedTo])
 
     def getConnections(self):
-        """Returns connections that the vertex holds."""
+        """Returns the other vertexes that the vertex is connected to"""
         return self.connectedTo.keys()
 
-    def getConnectionsDetailed(self):
-        """Exposes the connectedTo dictionary"""
-        return self.connectedTo
-
-    def removeConnection(nbr):
-        """Removes a connection from the Vertex"""
-        del self.connectedTo[nbr]
-
     def getId(self):
-        """Returns Vertex ID."""
+        """Returns vertex ID"""
         return self.id
 
     def getWeight(self,nbr):
-        """Returns the vertex weight."""
+        """Returns vertex weight"""
         return self.connectedTo[nbr]
 
-    def setColor(self,color):
-        """Sets the color according to DFS ADT"""
-        self.color = color
-
-    def getColor(self):
-        """Returns color of a node according to ADT implementation"""
-        return self.color
-    
-    def setPred(self,pred):
-        """Sets a predacessor for the Node according to ADT"""
-        self.pred = pred
-    
-    def setDiscovery(self,discovery):
-        """Sets discovery for Node according to ADT"""
-        self.discovery = discovery
-
-    def setFinish(self,finish):
-        """Sets finish for Node according to ADT"""
-        self.finish = finish
-
 class Graph:
-    """Graph implementation using the Vertex class."""
+    """Graph implementation"""
     def __init__(self):
-        """Initializes a graph class."""
+        """Initializes a Graph"""
         self.vertList = {}
         self.numVertices = 0
 
-    def transpose(self):
-        """Switches the direction of all edges in the Graph."""
-        eyedee = 0
-        newneighbors = {}
-        for k,v in self.vertList.items(): #iterating through vertices list in Graph.
-            d = {}
-            for b,n in v.connectedTo.items(): #iterating through connections on those individual vertices
-                d[v] = 1 # building new dictionary set
-            newneighbors[n] = d
-        for q,w in self.vertList.items():  #replacing the new neighbors
-            for i,o in v.connectedTo.items():
-                try: 
-                    i.replaceNeighbors(newneighbors[q])
-                except KeyError:
-                    print()
-    
-    def show(self):
-        """Prints off all vertices and their neightbors on the graph."""
-        for k,v in self.vertList.items():
-            print(k)
-            print(v)
-
     def addVertex(self,key):
-        """Adds a Vertex to the graph"""
+        """Adds a vertex to the Graph"""
         self.numVertices = self.numVertices + 1
         newVertex = Vertex(key)
         self.vertList[key] = newVertex
         return newVertex
 
     def getVertex(self,n):
-        """Gets a Vertex from the Graph"""
+        """Gets a Vertex from the graph"""
         if n in self.vertList:
             return self.vertList[n]
         else:
             return None
 
     def __contains__(self,n):
-        """Returns true if there is vertex in the Graph class."""
+        """Overrides contains method on Graph"""
         return n in self.vertList
 
     def addEdge(self,f,t,weight=0):
-        """Adds an edge to the Graph class."""
+        """Adds an edge to the graph"""
         if f not in self.vertList:
             nv = self.addVertex(f)
         if t not in self.vertList:
@@ -120,12 +63,37 @@ class Graph:
         self.vertList[f].addNeighbor(self.vertList[t], weight)
 
     def getVertices(self):
-        """Gets Vertices from the Graph."""
-        return self.vertList()
+        """Returns vertices from graph"""
+        return self.vertList.keys()
 
     def __iter__(self):
-        """Overrides and iterates over Graph class."""
+        """Overrides iterable method for graph"""
         return iter(self.vertList.values())
+
+    def show(self):
+        """Prints out graph vetices."""
+        for k,v in self.vertList.items():
+            print(v)
+    
+    def transpose(self):
+        """Flips the edges between the vertices on the graph"""
+        d = []
+        for k,v in self.vertList.items():
+            for b in v.getConnections():
+                weight = v.getWeight(b)
+                d.append((b.getId(),v.getId(),weight)) #f,t,weight
+        # for i in range(len(d)):
+        #     print(d[i][0] + " to " + d[i][1])
+        #     print(d[i][2])
+        self.nuke()
+        for i in range(len(d)):
+            self.addEdge(d[i][0],d[i][1],d[i][2])
+
+    def nuke(self):
+        """Deletes vertices"""
+        self.vertList.clear()
+        self.numVertices = 0
+        
 
 class testDFS(unittest.TestCase):
     """Tests to make sure that the dfs is working."""
@@ -148,8 +116,8 @@ class testDFS(unittest.TestCase):
         g.addEdge("f","c",7)
         print("old ones:")
         g.show()
+        print("new ones after transpose:")
         g.transpose()
-        print("new ones:")
         g.show()
 
 if __name__ == '__main__':
