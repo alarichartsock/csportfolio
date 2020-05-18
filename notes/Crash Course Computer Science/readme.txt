@@ -1,0 +1,1 @@
+Hi, it's Alaric. I watched Crash Course Computer Science during Spring 2020 as a self learning exercise to more familiarize myself with computer hardware in preparation for more rigorous coursework at Oregon State University in Corvallis. In short I wanted to get more involved with computer science theory.
