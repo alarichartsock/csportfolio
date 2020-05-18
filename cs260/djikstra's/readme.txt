@@ -1,1 +1,1 @@
-Me and Sam worked together. This isn't me stealing Sam's work.
+Me and Sam's work for the Djikstra's agorithm assignment.
