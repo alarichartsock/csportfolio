@@ -1,0 +1,3 @@
+Applied Cryptography
+C Programming: a modern approach
+Hacking: The art of exploitation

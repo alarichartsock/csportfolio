@@ -1,0 +1,85 @@
+<DOCTYPE html>
+    <html>
+    <head>
+        <title>CS160</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./readings.css">
+    </head>
+
+    <body>
+        <nav>
+            <p>Alaric Hartsock</p>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="#">Classwork</a>
+                    <ul>
+                        <li>
+                            <a href="../cs160.html">CS160</a>
+                        </li>
+                        <li>
+                            <a href="../../cs161/cs161.html">CS161</a>
+                        </li>
+                        <li>
+                            <a href="../../cs162/cs162.html">CS162</a>
+                        </li>
+                        <li>
+                            <a href="../../cs260/cs260.html">CS260</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Side Projects</a></li>
+                <li><a href="#">About me</a></li>
+            </ul>
+        </nav>
+        <div class="Center-Container">
+            <h2>CODE Reading Questions</h2>
+            <br>
+            <h4>Chapters 1-10</h4>
+                <p>The book starts with explaining how to write out numbers in base 8, 4, and 2 and how to convert between base 10, 8, 4 and 2 and add/subtract/multiply/divide numbers from base 10,8,4,2 into 10,8,4,2. It also goes into how relays were invented (basically the basis of computing, their design relates to transistors heavily). And then they go into logic gates and later explain how they can be built together to create more complex circuits. So it helps you understand computers on a basic level.</p>
+            <h4>Chapter 11</h4>
+                <p>and: takes two inputs and if they are both true then it returns positive, or: two inputs as before, if one is true then it returns positive, if they are both true it returns positive, if neither are true it returns negative, not: this is an inverter gate essentially, it will reverse its inputs, nand: is an inverted or gate.</p>
+            <h4>Chapter 12</h4>
+                <ol>
+                    <li><p>Built from an XOR & AND gate, 2 inputs 2 outputs</p></li>
+                    <li><p>Built with 2 half adders & an or gate. 3 inputs 2 outputs. so, 2 XOR & 3 AND gates, and 1 OR gate. 3 inputs, 2 outputs. The inputs consist of carry in, a in, b in & the outputs consist of sum out & carry out.</p></li>
+                    <li><p>16 inputs, 9 outputs</p></li>
+                    <li><p>144 relays</p></li>
+                </ol>
+            <h4>Chapter 13</h4>
+                <ul>
+                    <li><a href="https://www.screencast.com/t/HL59ifckTDp">Half Adder</a></li>
+                    <li><a href="https://www.screencast.com/t/IM4iUwQ3">Full Adder</a></li>
+                    <li><a href="https://www.screencast.com/t/g55XJJgHJ">4 Bit Adder</a></li>
+                    <li><a href="https://www.screencast.com/t/WpQLJxwnIh8">8 Bit Adder</a></li>
+                    <li><a href="https://www.screencast.com/t/RW5u5Edy1">8 Bit Adder with Subtraction</a></li>
+                </ul>
+            <h4>Chapter 14</h4>
+                <ul>
+                    <li><a href="https://www.screencast.com/t/3aGfIYJf">Adding Machine</a>
+                        <h2>Subcomponents in Adding Machine</h2>
+                        <ul>
+                            <li><a href="https://www.screencast.com/t/BD4uQajkxn6">8 Bit Latch</a></li>
+                            <li><a href="https://www.screencast.com/t/l5nV8b3feepG">8 Bit Selector</a></li>
+                        </ul>
+                    <li><a href="https://www.screencast.com/t/9shQvXIqBVIj">Edge Triggered D-Flip-Flop</a></li>
+                    <li><a href="https://www.screencast.com/t/YGQOphx7mjn">Ripple Counter. The Microcircuits are Logisim's D flip flops.</a></li>
+                </ul>
+            <h4>Chapter 15</h4>
+                <ol>
+                    <li><p>A Byte is 8 Bits (binary digits). </p></li>
+                    <li><p>Unsigned is 0-255, Signed is -128 to 127.</p></li>
+                    <li><p>The X represents a break.</p></li>
+                    <li><p>Hexadecimal.</p></li>
+                    <li><p>Base 16 is preferred because each Byte can be represented as two Hexadecimal digits, or, each nibble is (4 bits), is one Hexadecimal digit. And that’s a nice little clean number.</p></li>
+                    <li><p>That number in hexadecimal is AC3. The best way to convert would be to break it up into 4 bit groupings, and then individually convert the nibbles either using a chart or from memory from Binary to Hexadecimal.</p></li>
+                    <li><p>Negative signing? I’m not quite sure to be honest.</p></li>
+                </ol>
+            <h4>Chapter 16</h4>
+                <ol>
+                    <li><p>Kilo = thousand ; 1 kilobyte = 1,024 bytes ( or 1,000 bytes according to google conversions) (2^10 bytes),  Megas = Great ; 1 MB = 1,048,576 bytes (2^20 bytes) , Giga = Giant ; 1 GB = 2^30B, Tera = Monster ; 1 TB = 2^40 Bytes. Peta = Bread. Obviously. One PetaByte (or BreadBite as the Greek would say in their native toungue) is 2^50 Bytes.</p></li>
+                    <li><p>Not to pull the plug your computer when it’s running! RAM memory is volatile, it requires a constant supply of power to keep running.</p></li>
+                </ol>
+        </div>
+    </body>
+
+    </html>

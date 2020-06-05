@@ -5,7 +5,7 @@
 
 body {
     /* I actually took this photo in Alaska :) */
-    background-image: url(../assets/IMG_4172.jpg);
+    background-image: url(../../assets/IMG_4172.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -109,8 +109,8 @@ nav ul li ul li a:hover {
 
 .Center-Container p {
   color: black;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 50px;
   padding-right: 50px;
 }
