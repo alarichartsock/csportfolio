@@ -67,7 +67,7 @@ nav {
 
 nav ul li a {
     font-family: arial;
-    color: #eceff4 !important;
+    color: #eceff4;
     font-size: 16px;
     text-decoration: none;
 }
@@ -127,6 +127,6 @@ h1 {
     position: absolute;
 }
 
-h2, h3, a {
+h2, h3 {
     color: white !important;
 }
