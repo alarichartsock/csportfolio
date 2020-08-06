@@ -3,47 +3,13 @@ body {
     text-align: center;
     margin-bottom: 200%;
    }
-   
-   div {
-     display: inline-block;
-   }
-   
-   /* Box styles */
-   .myBlock {
-   border: none;
-   padding: 5px;
-   font: 28px aerial;
-   width: 200px;
-   height: 200px;
-   overflow-y: scroll;
-   color: white;
-   }
-   
-   /* Scrollbar styles */
-   ::-webkit-scrollbar {
-   width: 15px;
-   height: 15px;
-   }
-   
-   ::-webkit-scrollbar-track {
-   border: 1px solid #E91E63;
-   border-radius: 15px;
-   }
-   
-   ::-webkit-scrollbar-thumb {
-   background: #E91E63;  
-   border-radius: 15px;
-   }
-   
-   ::-webkit-scrollbar-thumb:hover {
-   background: #E91E63;  
-   }
 
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
 }
+
 
 #particles-js {
     width: 100%;
@@ -52,7 +18,7 @@ body {
 }
 
 .dropdown-menu li a {
-    color:#3b4252;
+    color:#3b4252 !important;
 }
 
 .dropdown-menu li a:hover {
@@ -92,7 +58,7 @@ nav ul li:hover ul {
 
 .container-fluid {
     background-color: #4c566a;
-    height: 500px;
+    /* height: 500px; */
     position: absolute;
     margin: 2.5% !important;
     width: 90% !important;
@@ -123,10 +89,52 @@ img {
     margin:auto;
 }
 
-h1 {
-    position: absolute;
+h2, h3,h1,a{
+    color: white !important;
 }
 
-h2, h3, a {
-    color: white !important;
+
+.Center-Container {
+    background-color: white;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    margin-bottom: auto;
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.Center-Container a {
+    font-family: arial;
+    color: #222;
+    font-size: 16px;
+    padding-top: 15px;
+    margin-top: 30px;
+    line-height: 150%;
+}
+
+.Center-Container ul {
+    line-height: 150%;
+
+}
+
+.Center-Container li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+}
+
+.Center-Container a {
+      padding-top: 5px;
+      padding-bottom: 5px;
+}
+
+.Center-Container p {
+  color: black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
