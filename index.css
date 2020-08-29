@@ -94,7 +94,6 @@ h1, h2, h3,h4 {
     padding-left: 3px;
 }
 
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Poppins:700,500,600,700&display=swap');
 *{
   margin: 0;
@@ -217,10 +216,6 @@ body, html {
   100% {
     clip: rect(14px, 700px, 100px, 30px);
   }
-=======
-h2, h3 {
-    color: white !important;
->>>>>>> c20a9115b2aef75a3eb6af119bd8c1ea08710b65
 }
 @keyframes glitch-2 {
   0% {
