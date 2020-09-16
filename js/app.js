@@ -1,3 +1,9 @@
+let currentText = '';
+let count = 0;
+let index = 0;
+let letter = '';
+let direction = true;
+
 var roles = [
   "Web developer.",
   "Computer science student.",
@@ -6,14 +12,8 @@ var roles = [
   "Based in Oregon, remotely available anywhere.",
 ];
 
-const word = 'websites';
-let currentText = '';
-let count = 0;
-let index = 0;
-let letter = '';
-let direction = true;
-
 function type() {
+
   setTimeout(type, 60);
 	if(count === 0) {
   	direction = true;
