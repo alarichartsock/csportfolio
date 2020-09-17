@@ -18,6 +18,20 @@ nav ul li a {
     text-decoration: none;
 }
 
+.navbar-collapse {
+  background-color: #f8f9fa;
+  box-sizing: content-box !important;
+  
+}
+
+
+.show, .collapsing {
+  margin-left: -3%;
+  margin-right: -3%;
+  margin-top: -1%;
+  padding-left: 3%;
+}
+
 .expand {
     background-color: #d8dee9;
     height: 93.5vh;
