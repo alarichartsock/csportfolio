@@ -1,5 +1,5 @@
 body {
-    background-color: #d8dee9;
+    background-color: #d8dee9 !important;
 }
 
 a:hover {
@@ -22,19 +22,46 @@ nav ul li a {
   font-family: 'Roboto Mono', monospace;
 }
 
+.aboutme h6 {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.aboutme-list {
+  padding-left: 0%;
+}
+
 .aboutme-list li {
     list-style: none;
-    width: 21%;
+    margin-top: .5%;
+    min-width: 60vw;
 }
 
 .services-list {
     display: flex;
     flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutme {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .services-list li {
     list-style: none;
-    width: 21%;
+    width: 15vw;
+    padding: 1.5%;
+    min-width: 200px;
+}
+
+.skills-list li {
+  padding: 1.5%;
+  min-width: 200px;
 }
 
 .services-list li p {
@@ -42,13 +69,17 @@ nav ul li a {
 }
 
 .skills-list {
-    display: flex;
-    flex-wrap:wrap;
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .skills-list li {
     list-style: none;
-    width: 21%;
+    width: 15vw;
+    min-width: 200px;
 }
 
 .expand {
@@ -66,14 +97,14 @@ nav ul li a {
     margin-left: 10%;
     background-color: #eceff4;
     border-radius: 16px;
-
+    text-align: center;
 }
 
 .aboutme, .skills, .services {
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 2.5%;
-  padding-bottom: 2.5%;
+  text-align: center;
 }
 
 @media screen and (min-width: 1000px) {
@@ -115,6 +146,7 @@ h1, h2, h3,h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .content .text{
