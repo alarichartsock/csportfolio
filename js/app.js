@@ -5,9 +5,8 @@ let letter = '';
 let direction = true;
 
 var roles = [
+  "Computer science & security student.",
   "Web developer.",
-  "Computer science student.",
-  "Security researcher.",
   "Based in Oregon, remotely available anywhere.",
   "Based in Oregon, remotely available anywhere.",
 ];

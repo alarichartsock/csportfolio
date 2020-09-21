@@ -24,6 +24,23 @@ nav ul li a {
   
 }
 
+.content2 {
+  width: 100vw;
+}
+
+#copyright {
+  position: fixed;
+  width: 100vw;
+  bottom: 2.0vh;
+}
+
+#icons {
+  padding-top: 5vh;
+}
+
+a {
+  color: #3b4252 !important;
+}
 
 .show, .collapsing {
   margin-left: -3%;
