@@ -27,7 +27,7 @@
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <div class=" collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ml-auto">
                     <ul class="navbar-nav ml-auto"></ul>
@@ -47,6 +47,103 @@
                 </div>
             </div>
         </nav>
+        <div class="expand">
+            <div class="d-flex flex-column">
+                <div class="content">
+                    <h1 class="text" data-text="Contact">Contact</h1>
+                </div>
+                <div class="content2">
+                    <h4 id="before">Home /</h4>
+                    <h4 id="typing"></h4>
+                    <h4 id="afterquote"> </h4>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio">
+            <div class="aboutme">
+                <h5><strong>Contact me</strong></h5><br>
+                <h6>Looking for an in house developer or just need some help with your projects? Consultation is a click
+                    away, email me at <a
+                        href="mailto:alaric.hartsock@yahoo.com?subject=consultation">alaric.hartsock@yahoo.com</a> or
+                    fill out the form below. </h6>
+            </div>
+
+            <div class="container form-top">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-danger">
+                            <div class="panel-body">
+                                <form id="reused_form">
+                                    <div class="form-group">
+                                        <label><i class="fa fa-user" aria-hidden="true"></i> Name</label>
+                                        <input type="text" name="name" class="form-control" placeholder="Enter Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
+                                        <input type="email" name="email" class="form-control" placeholder="Enter Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label><i class="fa fa-comment" aria-hidden="true"></i> Message</label>
+                                        <textarea rows="3" name="message" class="form-control"
+                                            placeholder="Type Your Message"></textarea>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <button class="btn btn-raised btn-block btn-danger">Post →</button>
+                                    </div>
+                                </form>
+                                <div id="error_message" style="width:100%; height:100%; display:none; ">
+                                    <h4>Error</h4>
+                                    Sorry there was an error sending your form.
+                                </div>
+                                <div id="success_message" style="width:100%; height:100%; display:none; ">
+                                    <h2>Success! Your Message was Sent Successfully.</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let count = 0;
+            let index = 0;
+            let letter = '';
+            let direction = true;
+
+            var text = [
+                "Contact",
+            ];
+
+            function type() {
+
+                setTimeout(type, 60);
+                if (count === 0) {
+                    direction = true;
+                }
+                if (letter.length >= text[index].length) {
+                    direction = false;
+                }
+                if (index == text.length - 1) {
+                    index = 0;
+                }
+                currentText = text[index];
+
+                if (direction) {
+                    letter = currentText.slice(0, count++);
+                    document.querySelector('#typing').textContent = letter;
+                } else { }
+
+                if (count === 0) {
+                    index++;
+                }
+            }
+
+            type();
+        </script>
+
 
 
         <!--Bootstrap JS-->
