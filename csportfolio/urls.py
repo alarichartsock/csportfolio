@@ -23,4 +23,5 @@ urlpatterns = [
     path('portfolio',hrpc.portfolio,name="portfolio"),
     path('resume',hrpc.resume,name='resume'),
     path('contact',hrpc.contact,name='contact'),
+    
 ]
