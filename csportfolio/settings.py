@@ -31,7 +31,6 @@ ALLOWED_HOSTS = [
     '*',
 ]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,9 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sitemaps',
+    'django.contrib.sites',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -57,6 +60,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'csportfolio.urls'
+
 TEMPLATE_DIRS = (
     BASE_DIR,
 )

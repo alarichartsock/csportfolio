@@ -22,7 +22,6 @@ nav ul li a {
 .navbar-collapse {
   background-color: #f8f9fa;
   box-sizing: content-box !important;
-  
 }
 
 
@@ -31,6 +30,7 @@ nav ul li a {
   margin-right: -3%;
   margin-top: -1%;
   padding-left: 3%;
+  padding-bottom: 2.5vh;
 }
 
 
