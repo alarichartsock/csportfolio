@@ -38,9 +38,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../resume">Resume</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="../portfolio">Portfolio</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="../contact">Contact</a>
                     </li>
@@ -48,124 +48,13 @@
                 </div>
             </div>
         </nav>
-
-        <div class="expand">
-            <div class="d-flex flex-column">
-                <div class="content" style="height: 10vh;"> 
-                    <h1 class="text" data-text="Resume">Resume</h1>
-                </div>
-                <div class="content2">
-                    <h4 id="before">Home /</h4>
-                    <h4 id="typing"></h4>
-                    <h4 id="afterquote"> </h4>
-                </div>
+        <div class="resume" style="margin-top:5vh">
+            
+            <div class="aboutme" style="padding:0px">
+                <!-- <h5><strong>Resume</strong></h5><br> -->
+                <embed src="{% static "assets/documents/Resume.pdf" %}" width="100%" height="900px"/>
             </div>
         </div>
-        <div class="resume">
-            <div class="aboutme">
-                <h5><strong>About me</strong></h5><br>
-                <h6>Hello! I'm Alaric. I'm a computer science student studying at Oregon State University interested in
-                    software development and computer security.</h6>
-                <ul class="aboutme-list">
-                    <li><strong>Age:</strong> 20</li>
-                    <li><strong>Residence:</strong> Oregon, USA</li>
-                    <li><strong>Freelance:</strong> Available</li>
-                    <li><strong>Email:</strong> <a href="mailto:me@alarichartsock.com?subject=consultation">Business
-                            email</a></li>
-                </ul>
-            </div>
-            <h6><a href="{% static "assets/documents/Resume.pdf" %}" download>Download resume</a></h6>
-            <div class="services">
-                <h5>Services</h5>
-                <ul class="services-list">
-                    <li>
-                        <strong>Web development</strong><br>
-                        <p>Modern and mobile-ready websites that will meet or exceed your needs.</p>
-                    </li>
-                    <li>
-                        <strong>Computer security</strong><br>
-                        <p>Penetration testing and network hardening to keep your infastructure safe.</p>
-                    </li>
-                    <li>
-                        <strong>Software development</strong><br>
-                        <p>Software development with languages from C to enterprise level object oriented languages</p>
-                    </li>
-                    <li>
-                        <strong>App development</strong><br>
-                        <p>Native app cross platform app development using Flutter</p>
-                    </li>
-                </ul>
-                <div class="service">
-                </div>
-            </div>
-
-            <div class="skills">
-                <h5>Skills</h5>
-                <ul class="skills-list">
-                    <li>
-                        <strong>GNU/Linux</strong><br>
-                        <p>Familiar with GNU/Linux and Unix type operating systems, package managers, and commands.</p>
-                    </li>
-                    <li>
-                        <strong>Computer security</strong><br>
-                        <p>Experienced with penetration testing and network hardening</p>
-                    </li>
-                    <li>
-                        <strong>Software development</strong><br>
-                        <p>Proficient with Python, Dart, Javascript, C, and Java.</p>
-                    </li>
-                    <li>
-                        <strong>Flutter</strong><br>
-                        <p>Familiar and comfortable with Flutter, a native cross platform app development framework</p>
-                    </li>
-                    <li>
-                        <strong>Web maintenance</strong><br>
-                        <p>Comfortable with DNS, hosting providers, HTTPS, and most other topics related to website
-                            upkeep.</p>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-        <script>
-            let count = 0;
-            let index = 0;
-            let letter = '';
-            let direction = true;
-
-            var text = [
-                "Resume",
-            ];
-
-            function type() {
-
-                setTimeout(type, 60);
-                if (count === 0) {
-                    direction = true;
-                }
-                if (letter.length >= text[index].length) {
-                    direction = false;
-                }
-                if (index == text.length - 1) {
-                    index = 0;
-                }
-                currentText = text[index];
-
-                if (direction) {
-                    letter = currentText.slice(0, count++);
-                    document.querySelector('#typing').textContent = letter;
-                } else {
-
-                }
-
-                if (count === 0) {
-                    index++;
-                }
-            }
-
-            type();
-        </script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

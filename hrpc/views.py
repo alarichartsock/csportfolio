@@ -1,5 +1,7 @@
 from django.shortcuts import render
 import re
+from django.http import JsonResponse
+import requests
 
 def mobile(request):
 # Return True if the request comes from a mobile device.
@@ -36,3 +38,6 @@ def contact(request):
         return render(request,'mobilecontact.html')
     else:
         return render(request,"contact.html") # Desktop users
+
+def license(request):
+    return render(request,'license.html')

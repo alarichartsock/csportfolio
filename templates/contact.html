@@ -38,9 +38,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../resume">Resume</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="../portfolio">Portfolio</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="../contact">Contact</a>
                     </li>
@@ -50,14 +50,15 @@
         </nav>
         <div class="expand">
             <div class="d-flex flex-column">
-                <div class="content" style="height: 10vh;">
+                
+                <!-- <div class="content" style="height: 10vh;">
                     <h1 class="text" data-text="Contact">Contact</h1>
                 </div>
                 <div class="content2">
                     <h4 id="before">Home /</h4>
                     <h4 id="typing"></h4>
                     <h4 id="afterquote"> </h4>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="portfolio">
@@ -68,39 +69,6 @@
                         href="mailto:me@alarichartsock.com?subject=consultation">me@alarichartsock.com</a></h6>
             </div>
         </div>
-
-        <script>
-            let count = 0;
-            let index = 0;
-            let letter = '';
-            let direction = true;
-
-            var text = [ "Contact" ];
-
-            function type() {
-                setTimeout(type, 60);
-                if (count === 0) {
-                    direction = true;
-                }
-                if (letter.length >= text[index].length) {
-                    direction = false;
-                }
-                if (index == text.length - 1) {
-                    index = 0;
-                }
-                currentText = text[index];
-
-                if (direction) {
-                    letter = currentText.slice(0, count++);
-                    document.querySelector('#typing').textContent = letter;
-                } else { }
-
-                if (count === 0) {
-                    index++;
-                }
-            }
-            type();
-        </script>
         <!--Bootstrap JS-->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

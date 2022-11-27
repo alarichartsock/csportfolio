@@ -127,43 +127,6 @@
 
         </div>
  
-         <script>
-             let count = 0;
-             let index = 0;
-             let letter = '';
-             let direction = true;
- 
-             var text = [
-               "Portfolio",
-             ];
- 
-             function type() {
- 
-               setTimeout(type, 60);
-                  if(count === 0) {
-                    direction = true;
-               }
-                 if(letter.length >= text[index].length) {
-                 direction = false;
-               }
-               if(index == text.length-1) {
-                 index = 0;
-               }
-               currentText = text[index];
-           
-               if(direction) {
-                    letter = currentText.slice(0,count++);
-                 document.querySelector('#typing').textContent = letter;
-               } else { }
-           
-               if(count === 0) {
-                 index++;
-               }
-             }
- 
-             type();
-         </script>
- 
          <!--Bootstrap JS-->
          <script src="https://code.jquery.com/jquery-3.3.1.min.js"
              integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

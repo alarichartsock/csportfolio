@@ -24,6 +24,10 @@ To stop apache after boot:
 
 $ sudo systemctl stop apache2
 
+To kill gunicorn:
+     $ ps ax | grep gunicorn
+     $ pkill gunicorn
+
 Todo:
      Fix mobile incompatibilities
      Add email contact form
