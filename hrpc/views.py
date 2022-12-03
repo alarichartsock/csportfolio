@@ -1,7 +1,9 @@
 from django.shortcuts import render
 import re
 from django.http import JsonResponse
+from django.http import FileResponse
 import requests
+import os
 
 def mobile(request):
 # Return True if the request comes from a mobile device.
@@ -15,29 +17,15 @@ def mobile(request):
 # Create your views here.
 
 def index(request):
-    if mobile(request):
-        return render(request,'mobileindex.html') # Mobile users don't get the cool glitch text effect (breaks on mobile), same for all the other views
-    else:
-        return render(request,"index.html") # Desktop users
+    return render(request,"index.html") # Desktop users
 
 def resume(request):
     if mobile(request):
-        return render(request,'mobileresume.html')
+        filepath = os.path.join('/home/bitnami/csportfolio/static','assets/documents/Resume.pdf')
+        print(filepath)
+        return FileResponse(open(filepath,'rb'),content_type='application/pdf')
     else:
         return render(request,"resume.html") # Desktop users
-     
-
-def portfolio(request):
-    if mobile(request):
-        return render(request,'mobileportfolio.html')
-    else:
-        return render(request,"portfolio.html") # Desktop users
-
-def contact(request):
-    if mobile(request):
-        return render(request,'mobilecontact.html')
-    else:
-        return render(request,"contact.html") # Desktop users
 
 def license(request):
     return render(request,'license.html')

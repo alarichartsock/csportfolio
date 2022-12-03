@@ -18,7 +18,7 @@ To free up port 80 after boot:
 $ fuser 80/tcp
 $ fuser 80/tcp -k
 
-$ kill$(lsof -t -i:"443")
+$ kill $(lsof -t -i:"443")
 
 To stop apache after boot: 
 

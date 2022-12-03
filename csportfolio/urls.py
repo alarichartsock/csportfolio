@@ -20,8 +20,6 @@ from hrpc import views as hrpc
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',hrpc.index,name="index"),
-    path('portfolio',hrpc.portfolio,name="portfolio"),
     path('resume',hrpc.resume,name='resume'),
-    path('contact',hrpc.contact,name='contact'),
     path('license',hrpc.license,name='license')
 ]
