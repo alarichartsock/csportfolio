@@ -22,7 +22,6 @@ def index(request):
 def resume(request):
     if mobile(request):
         filepath = os.path.join('/home/bitnami/csportfolio/static','assets/documents/Resume.pdf')
-        print(filepath)
         return FileResponse(open(filepath,'rb'),content_type='application/pdf')
     else:
         return render(request,"resume.html") # Desktop users

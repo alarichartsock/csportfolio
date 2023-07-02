@@ -177,6 +177,12 @@ body, html {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  #copyright{
+    opacity: 0.0;
+  }
+}
+
 
 @keyframes glitch-1 {
   0% {
