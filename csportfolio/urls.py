@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',hrpc.index,name="index"),
     path('resume',hrpc.resume,name='resume'),
-    path('license',hrpc.license,name='license')
+    path('license',hrpc.license,name='license'),
+    path('robots.txt', hrpc.robots, name='robots'),
+    path('sitemap.xml', hrpc.sitemap, name='sitemap')
 ]

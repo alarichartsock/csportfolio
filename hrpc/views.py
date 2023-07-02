@@ -28,3 +28,9 @@ def resume(request):
 
 def license(request):
     return render(request,'license.html')
+
+def robots(request):
+    return render(request, 'robots.txt')
+
+def sitemap(request):
+    return render(request, 'sitemap.xml')
