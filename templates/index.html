@@ -35,8 +35,12 @@
                         <a class="nav-link" href=".">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/resume">Resume</a>
-                    </li>    </div>
+                    </li>    
+                </div>
             </div>
         </nav>
 
@@ -44,8 +48,7 @@
 
         <div class="expand">
             
-            <div class="d-flex flex-column" style="position:relative;">
-                
+            <div>
                 <div class="content">
                     <h1 class="text" > <!-- to add back in flashing: data-text="Alaric Hartsock" -->
                         Alaric Hartsock</h1>
@@ -65,19 +68,20 @@
                 <div id="copyright">
                     <h6><a href="/license"">License</a></h6>
                 </div>
-            </div>
         </div>
+    </div> 
         </div>
 
         <!-- Custom JS -->
         <script src="{% static "js/particles.js" %}"></script>
-        <script src="{% static "js/app.js" %}"></script>
+        <script src="{% static "js/main.js" %}"></script>
+        <script src="{% static "js/home.js" %}"></script>
         <script>
             type()
         </script>
 
         <!-- Custom CSS-->
-        <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
 
         <!--Roboto font CSS -->
         <link href='https://fonts.googleapis.com/css2?family=Roboto&display=swap' rel='stylesheet' type='text/css'>

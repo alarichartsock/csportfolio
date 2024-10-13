@@ -1,3 +1,7 @@
 django
 whitenoise
 gunicorn
+requests
+markdown
+django-sites
+black
